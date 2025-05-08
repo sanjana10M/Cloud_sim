@@ -1,0 +1,28 @@
+sudo add-apt-repository ppa:webupd8team/java
+
+sudo apt-get update && sudo apt-get install oracle-java8-installer
+
+sudo update-alternatives --config java
+Or
+sudo apt install openjdk-8-jdk
+sudo update-alternatives --config java
+
+sudo gedit /etc/environment
+JAVA_HOME="usr/lib/jvm/java-8-openjdk-amd64"
+
+Install this:
+https://github.com/Cloudslab/cloudsim/releases/download/cloudsim-3.0.3/cloudsim-3.0.3.zip and
+extract to Home itself. Not in the desktop folder.
+
+sudo apt install ant
+ant -version
+
+cd ~/cloudsim-3.0.3
+
+ls
+
+
+
+ javac -source 8 -target 8 -classpath jars/cloudsim-3.0.3.jar:examples examples/org/cloudbus/cloudsim/examples/CloudSimExample1.java
+
+java -classpath jars/cloudsim-3.0.3.jar:examples org.cloudbus.cloudsim.examples.CloudSimExample1
